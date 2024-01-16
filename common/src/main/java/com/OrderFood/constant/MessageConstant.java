@@ -25,4 +25,6 @@ public class MessageConstant {
     public static final String ORDER_STATUS_ERROR = "订单状态错误";
     public static final String ORDER_NOT_FOUND = "订单不存在";
 
+    public static final String ON_SALE = "在售中,不能删除";
+    public static final String RELATED_BY_SETMEAL = "关联了套餐,不能删除";
 }

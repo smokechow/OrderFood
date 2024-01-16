@@ -1,5 +1,6 @@
 package com.OrderFood.controller.admin;
 
+
 import com.OrderFood.dto.CategoryDTO;
 import com.OrderFood.dto.CategoryPageQueryDTO;
 import com.OrderFood.entity.Category;
@@ -13,10 +14,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
+
 /**
  * 分类管理
  */
-@RestController
+@RestController("adminCategoryController")
 @RequestMapping("/admin/category")
 @Api(tags = "分类相关接口")
 @Slf4j
@@ -28,6 +30,7 @@ public class CategoryController {
     /**
      * 新增分类
      * @param categoryDTO
+     * @return
      */
     @PostMapping
     @ApiOperation("新增分类")
@@ -40,6 +43,7 @@ public class CategoryController {
     /**
      * 分类分页查询
      * @param categoryPageQueryDTO
+     * @return
      */
     @GetMapping("/page")
     @ApiOperation("分类分页查询")
@@ -52,6 +56,7 @@ public class CategoryController {
     /**
      * 删除分类
      * @param id
+     * @return
      */
     @DeleteMapping
     @ApiOperation("删除分类")
@@ -77,6 +82,7 @@ public class CategoryController {
      * 启用、禁用分类
      * @param status
      * @param id
+     * @return
      */
     @PostMapping("/status/{status}")
     @ApiOperation("启用禁用分类")
@@ -88,6 +94,7 @@ public class CategoryController {
     /**
      * 根据类型查询分类
      * @param type
+     * @return
      */
     @GetMapping("/list")
     @ApiOperation("根据类型查询分类")

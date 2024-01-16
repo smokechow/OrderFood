@@ -16,7 +16,6 @@ import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -96,7 +95,7 @@ public class EmployeeController {
      */
     @PostMapping("/page")
     @ApiOperation("分页查询")
-    public Result page(@RequestBody EmployeePageQueryDTO employeePageQueryDTO){
+    public Result<PageResult> page(@RequestBody EmployeePageQueryDTO employeePageQueryDTO){
         log.info("分页查询：{}", employeePageQueryDTO);
 
         PageResult pageResult = employeeService.pageQuery(employeePageQueryDTO);

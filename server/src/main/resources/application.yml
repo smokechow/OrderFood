@@ -12,6 +12,10 @@ spring:
       url: jdbc:mysql://${orderfood.datasource.host}:${orderfood.datasource.port}/${orderfood.datasource.database}?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
       username: ${orderfood.datasource.username}
       password: ${orderfood.datasource.password}
+  redis:
+    host: ${orderfood.redis.host}
+    port: ${orderfood.redis.port}
+    database: 0
 
 mybatis:
   #mapper配置文件
@@ -32,8 +36,27 @@ logging:
 orderfood:
   jwt:
     # 设置jwt签名加密时使用的秘钥
-    admin-secret-key: itcast
+    admin-secret-key: kys
     # 设置jwt过期时间
-    admin-ttl: 7200000
+    admin-ttl: 7200000000000000
     # 设置前端传递过来的令牌名称
     admin-token-name: token
+    user-secret-key: kys1
+    user-ttl: 7200000
+    user-token-name: authentication
+  alioss:
+    endpoint: ${orderfood.alioss.endpoint}
+    access-key-id: ${orderfood.alioss.access-key-id}
+    access-key-secret: ${orderfood.alioss.access-key-secret}
+    bucket-name: ${orderfood.alioss.bucket-name}
+  wechat:
+    appid: ${orderfood.wechat.appid}
+    secret: ${orderfood.wechat.secret}
+    mchid: ${orderfood.wechat.mchid}
+    mch-serial-no: ${orderfood.wechat.mch-serial-no}
+    private-key-file-path: ${orderfood.wechat.private-key-file-path}
+    api-v3-key: ${orderfood.wechat.api-v3-key}
+    we-chat-pay-cert-file-path: ${orderfood.wechat.we-chat-pay-cert-file-path}
+    notify-url: ${orderfood.wechat.notify-url}
+    refund-notify-url: ${orderfood.wechat.refund-notify-url}
+

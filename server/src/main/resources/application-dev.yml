@@ -6,3 +6,21 @@ orderfood:
     database: OrderFood
     username: root
     password: 123
+  alioss:
+    endpoint: oss-cn-guangzhou.aliyuncs.com
+    access-key-id: LTAI5tNMkbJfctRwXesMUr3y
+    access-key-secret: pM1z1aGNIlPBKCQIN0hg7ieZ015y0N
+    bucket-name: nkko
+  redis:
+    host: localhost
+    port: 6379
+  wechat:
+    appid: wxf1bc9f400970c019
+    secret: 81e7abb252446657158dd87aa86646e6
+    mchid: asd
+    mch-serial-no: asd
+    private-key-file-path: asd
+    api-v3-key: asd
+    we-chat-pay-cert-file-path: asd
+    notify-url: asd
+    refund-notify-url: asd
